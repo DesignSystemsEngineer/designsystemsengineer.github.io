@@ -1,13 +1,13 @@
 const ghpages = require("gh-pages");
 
 ghpages.publish(
-  "__sapper__/export/<your-app-name>",
+  "__sapper__/export/",
   {
-    branch: "master",
-    repo: "https://github.com/<your-github-username>/<your-repo-name>.git",
+    branch: "gh-pages",
+    repo: "https://github.com/DesignSystemsEngineer/Blog.git",
     user: {
-      name: "<your-github-username>",
-      email: "<your-github-email>",
+      name: "garthdb",
+      email: "garthdb@gmail.com",
     },
   },
   () => {
