@@ -11,7 +11,7 @@ As of writing this, I'm about to start the last semester (knock on wood) in my m
 
 This blog's primary intention is to catalog the progress I make in creating my capstone project and the changes I make to my proposed plan along the way.
 
-You can read my final capstone proposal [here (capstone-proposal.pdf)](/capstone-proposal.pdf).
+You can read my final capstone proposal [here (capstone-proposal.pdf)](/capstone-proposal.pdf). I separated out my [completion milestones](/milestones.pdf) if you'd like to see just that section (5).
 
 ## Work created in preparation for my capstone project.
 
