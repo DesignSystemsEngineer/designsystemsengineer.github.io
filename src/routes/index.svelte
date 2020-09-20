@@ -39,4 +39,5 @@
 </svelte:head>
 
 <h1>Design Systems Engineer</h1>
-<p>Sign up for my weekly newsletter <a href="https://backyard-studio.ck.page/ad40317bf0">here</a>.</p>
+<form action="https://app.convertkit.com/forms/827850/subscriptions" class="seva-form formkit-form" method="post" data-sv-form="827850" data-uid="ad40317bf0" data-format="inline" data-version="5">
+</form>
