@@ -1,3 +1,9 @@
+<script>
+  import Button from "humdrum-svelte/src/Button.svelte";
+  import Heading from "humdrum-svelte/src/Heading.svelte";
+  import "humdrum-svelte/src/css/humdrum-ui.css";
+</script>
+
 <style>
   h1,
   figure,
@@ -37,6 +43,27 @@
 <svelte:head>
   <title>Sapper project template</title>
 </svelte:head>
+<Heading>Design Systems Engineer</Heading>
+<p>
+  Sign up for my weekly newsletter <a
+    href="https://backyard-studio.ck.page/ad40317bf0">here</a>.
+</p>
+<Button labelText="Garth"/>
 
-<h1>Design Systems Engineer</h1>
-<p>Sign up for my weekly newsletter <a href="https://backyard-studio.ck.page/ad40317bf0">here</a>.</p>
+<form
+  action="https://app.convertkit.com/forms/827850/subscriptions"
+  class="seva-form formkit-form"
+  method="post"
+  data-sv-form="827850"
+  data-uid="ad40317bf0"
+  data-format="inline"
+  data-version="5"
+  min-width="400 500 600 700">
+  <input
+    type="text"
+    class="formkit-input"
+    name="email_address"
+    placeholder="Your email address"
+    required="" />
+  <input type="submit" value="Subscribe" />
+</form>

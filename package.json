@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "compression": "^1.7.1",
+    "humdrum-svelte": "^0.2.0",
+    "humdrum-ui": "^1.0.3",
     "polka": "next",
     "sirv": "^1.0.0"
   },
