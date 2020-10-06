@@ -1,9 +1,10 @@
 ---
-title: Week 2
+title: Week 2 (2020-09-11)
 slug: week-2
 summary: A week of research.
 date: 2020-09-11
 ---
+
 For my capstone project, the most significant progress was made in a meeting with my advisor today.
 
 I've decided I need to limit my scope regarding the design system I'm creating for the course and the course itself. There are so many topics I'd like to cover that I'm not going to be able to do it all in this semester.

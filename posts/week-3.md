@@ -1,9 +1,10 @@
 ---
-title: Week 3
+title: Week 3 (2020-09-18)
 slug: week-3
 summary: A week of research.
-date: 2020-09-11
+date: 2020-09-18
 ---
+
 I have started the Style Dictionary work I mentioned last week with the Hum Drum UI kit tokens.
 
 I've setup my form, but found it wasn't a trivial thing to add it to my Svelte based website.

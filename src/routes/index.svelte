@@ -1,69 +1,47 @@
 <script>
-  import Button from "humdrum-svelte/src/Button.svelte";
-  import Heading from "humdrum-svelte/src/Heading.svelte";
-  import "humdrum-svelte/src/css/humdrum-ui.css";
+  import Button from "@dsengineer/svelte/lib/components/Button.svelte";
+  import Heading from "@dsengineer/svelte/lib/components/Heading.svelte";
+  import Grid from "@dsengineer/svelte/lib/components/Grid.svelte";
+  import GridItem from "@dsengineer/svelte/lib/components/GridItem.svelte";
+  import Page from "@dsengineer/svelte/lib/components/Page.svelte";
+  import Input from "@dsengineer/svelte/lib/components/Input.svelte";
 </script>
 
 <style>
-  h1,
-  figure,
-  p {
-    text-align: center;
-    margin: 0 auto;
-  }
-
-  h1 {
-    font-size: 2.8em;
-    text-transform: uppercase;
-    font-weight: 700;
-    margin: 0 0 0.5em 0;
-  }
-
-  figure {
-    margin: 0 0 1em 0;
-  }
-
-  img {
-    width: 100%;
-    max-width: 400px;
-    margin: 0 0 1em 0;
-  }
-
-  p {
-    margin: 1em auto;
-  }
-
-  @media (min-width: 480px) {
-    h1 {
-      font-size: 4em;
-    }
+  :global(.content) {
+    max-width: 768px;
   }
 </style>
 
 <svelte:head>
   <title>Sapper project template</title>
 </svelte:head>
-<Heading>Design Systems Engineer</Heading>
-<p>
-  Sign up for my weekly newsletter <a
-    href="https://backyard-studio.ck.page/ad40317bf0">here</a>.
-</p>
-<Button labelText="Garth"/>
 
-<form
-  action="https://app.convertkit.com/forms/827850/subscriptions"
-  class="seva-form formkit-form"
-  method="post"
-  data-sv-form="827850"
-  data-uid="ad40317bf0"
-  data-format="inline"
-  data-version="5"
-  min-width="400 500 600 700">
-  <input
-    type="text"
-    class="formkit-input"
-    name="email_address"
-    placeholder="Your email address"
-    required="" />
-  <input type="submit" value="Subscribe" />
-</form>
+<Page>
+  <Grid class="content">
+    <GridItem colSpan="3">
+      <Heading size="XXXL">Design Systems Engineer</Heading>
+    </GridItem>
+    <GridItem colSpan="3" />
+    <GridItem colSpan="3">
+      <p>
+        Sign up for my weekly newsletter
+        <a href="https://backyard-studio.ck.page/ad40317bf0">here</a>.
+      </p>
+    </GridItem>
+    <GridItem colSpan="3">
+      <form
+        action="https://app.convertkit.com/forms/827850/subscriptions"
+        class="seva-form formkit-form"
+        method="post"
+        data-sv-form="827850"
+        data-uid="ad40317bf0"
+        data-format="inline"
+        data-version="5"
+        min-width="400 500 600 700">
+        <Input />
+        <Button labelText="Subscribe" />
+      </form>
+    </GridItem>
+  </Grid>
+</Page>
