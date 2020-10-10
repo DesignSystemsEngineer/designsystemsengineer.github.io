@@ -1,5 +1,5 @@
 ---
-title: Week 3 (2020-09-18)
+title: Week 3
 slug: week-3
 summary: A week of research.
 date: 2020-09-18

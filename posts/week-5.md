@@ -1,5 +1,5 @@
 ---
-title: Week 5 (2020-10-02)
+title: Week 5
 slug: week-5
 summary: A week of research.
 date: 2020-10-02

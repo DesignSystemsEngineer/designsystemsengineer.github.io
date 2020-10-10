@@ -1,5 +1,5 @@
 ---
-title: Week 2 (2020-09-11)
+title: Week 2
 slug: week-2
 summary: A week of research.
 date: 2020-09-11

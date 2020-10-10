@@ -5,6 +5,7 @@ const contents = JSON.stringify(
     return {
       title: post.title,
       slug: post.slug,
+      date: post.date,
     };
   })
 );
