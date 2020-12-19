@@ -1,15 +1,29 @@
 <script>
-  import Button from "@dsengineer/svelte/lib/components/Button.svelte";
-  import Heading from "@dsengineer/svelte/lib/components/Heading.svelte";
-  import Grid from "@dsengineer/svelte/lib/components/Grid.svelte";
-  import GridItem from "@dsengineer/svelte/lib/components/GridItem.svelte";
-  import Page from "@dsengineer/svelte/lib/components/Page.svelte";
-  import Input from "@dsengineer/svelte/lib/components/Input.svelte";
+  import {
+    Button,
+    Heading,
+    Grid,
+    GridItem,
+    Page,
+    Input,
+  } from "@dsengineer/svelte";
 </script>
 
 <style>
   :global(.content) {
     max-width: 768px;
+  }
+  :global(.mainTitle) {
+    position: relative;
+    z-index: 2;
+  }
+  .glacierImg {
+    width: 100%;
+    position: relative;
+    top: -120px;
+    left: -20px;
+    opacity: 0.2;
+    z-index: 0;
   }
 </style>
 
@@ -20,28 +34,39 @@
 <Page>
   <Grid class="content">
     <GridItem colSpan="3">
-      <Heading size="XXXL">Design Systems Engineer</Heading>
+      <Heading class="mainTitle" size="XXXL">Design Systems Engineer</Heading>
     </GridItem>
     <GridItem colSpan="3" />
-    <GridItem colSpan="3">
-      <p>
-        Sign up for my weekly newsletter
-        <a href="https://backyard-studio.ck.page/ad40317bf0">here</a>.
-      </p>
+    <GridItem colSpan="6">
+      <img class="glacierImg" src="/glacier.jpg" alt="Hidden Lake at Glacier National Park"/>
     </GridItem>
-    <GridItem colSpan="3">
-      <form
-        action="https://app.convertkit.com/forms/827850/subscriptions"
-        class="seva-form formkit-form"
-        method="post"
-        data-sv-form="827850"
-        data-uid="ad40317bf0"
-        data-format="inline"
-        data-version="5"
-        min-width="400 500 600 700">
-        <Input />
-        <Button labelText="Subscribe" />
-      </form>
+    <GridItem colSpan="6">
+      <p>
+        The Design Systems Engineering course content is built for engineers to
+        follow me along the path as we together create an entire Design System.
+        Follow along with the video content and apply your knowledge of the
+        design system building process to meet the needs of your businesses or
+        clients. You will gain experience in building, testing, and maintaining
+        a design system in a structured and predictable fashion throughout the
+        course. At the end of each unit, a constructivist activity will be
+        provided to allow each learner to apply the knowledge obtained and build
+        your own individual design system while keeping your own engineering
+        goals in mind.
+      </p>
+
+      <ul>
+        <li>Structured and Predictable</li>
+        <li>Building</li>
+        <li>Testing</li>
+        <li>Maintaining</li>
+      </ul>
+      <p>
+        Create a usable Design System following a minimum viable product
+        strategy. Each subsequent unit will take the existing viable product and
+        augment it with additional features.
+      </p>
+
+      <p>Subscribe Now</p>
     </GridItem>
   </Grid>
 </Page>

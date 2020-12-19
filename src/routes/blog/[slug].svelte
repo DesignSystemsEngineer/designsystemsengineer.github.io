@@ -15,8 +15,7 @@
 
 <script>
   export let post;
-  import Grid from "@dsengineer/svelte/lib/components/Grid.svelte";
-  import GridItem from "@dsengineer/svelte/lib/components/GridItem.svelte";
+  import {Grid, GridItem} from "@dsengineer/svelte";
 </script>
 
 <style>

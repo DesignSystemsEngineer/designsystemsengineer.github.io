@@ -34,8 +34,10 @@ export default {
         "process.env.NODE_ENV": JSON.stringify(mode),
       }),
       svelte({
-        dev,
-        hydratable: true,
+        compilerOptions: {
+          dev,
+          hydratable: true,
+        },
         emitCss: true,
         preprocess: sveltePreprocess({
           postcss: {
@@ -96,14 +98,16 @@ export default {
         "process.env.NODE_ENV": JSON.stringify(mode),
       }),
       svelte({
-        generate: "ssr",
-        hydratable: true,
+        compilerOptions: {
+          generate: "ssr",
+          hydratable: true,
+          dev
+        },
         preprocess: sveltePreprocess({
           postcss: {
             plugins: [require("postcss-import")],
           },
         }),
-        dev,
       }),
       resolve({
         dedupe: ["svelte"],
