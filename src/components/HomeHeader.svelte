@@ -27,7 +27,7 @@ import { Button, Grid, GridItem, Heading } from "@dsengineer/svelte";
 
 <div class="fullwidth">
   <Grid class="homeheader">
-    <Heading size="XS" class="dse-grid__2col logoTitle">Design Systems Engineer</Heading>
+    <Heading size="XS" class="dse-grid__2col logoTitle"><img src="/favicon.svg" height="30" alt="logo" style="vertical-align: middle;"/> Design Systems Engineer</Heading>
     <GridItem colSpan="2" class="loginButtonContainer">
       <Button href="courses">email login link</Button>
     </GridItem>
