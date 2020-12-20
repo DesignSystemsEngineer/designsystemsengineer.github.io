@@ -57,10 +57,11 @@
   <GridItem colSpan="6">
     <div class="dse-lesson">
       <Heading class="dse-lesson__title" size="XXL">{lesson.title}</Heading>
-      <div class="dse-lesson__description">{lesson.summary}</div>
+      <div class="dse-lesson__description">{@html lesson.summary}</div>
       <div class="videoWrapper">
         {@html lesson.embed}
       </div>
+      {#if lesson.code}
       <div class="dse-lesson__code">
         <Heading class="dse-lesson__title" size="XL">Code</Heading>
         <CodePenEmbed
@@ -71,6 +72,7 @@
           slug={lesson.code.completed}
           codepenTitle="DSE Button" showCodePen={false}/>
       </div>
+      {/if}
       <div class="dse-lesson__transcript">
         <Heading class="dse-lesson__title" size="XL">Video Transcript</Heading>
         {@html lesson.transcript}

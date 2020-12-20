@@ -6,7 +6,14 @@ const all = [
     summary: "A short post about ...",
     description: `<p>What is a design system? How is it different from a UI Kit or Styleguide? How is it different from Bootstrap or Foundation? At what point do you need a design system? How do you start one?</p>
 <p>In this short course, we’ll learn the fundamentals of building a design system and how to approach it in a sustainable way.</p>`,
-    lessons: [],
+    lessons: [
+      {
+        slug: "introduction",
+        title: "Let's get started",
+        duration: "PT3M13S",
+        description: "Welcome to Design Systems Engineer.",
+      },
+    ],
   },
   {
     title: "CSS Design System Components",
