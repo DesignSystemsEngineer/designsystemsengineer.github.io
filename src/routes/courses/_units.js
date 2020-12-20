@@ -1,3 +1,6 @@
+import { parse, toSeconds } from "iso8601-duration";
+import prettyMilliseconds from "pretty-ms";
+
 const all = [
   {
     title: "Fundamentals of Design System Engineering",
@@ -40,7 +43,7 @@ const all = [
       {
         slug: "dse-button-css-activity-review",
         title: "DSE Button CSS Activity Review",
-        duration: "PT1M49S",
+        duration: "PT4M41S",
         description: `Ok, let's take a look at what you made. There are so many ways to accomplish this task, and I wanted to try to highlight that. There isn't a perfect way, at least I haven't found it, but avoid letting "the perfect" become the enemy of "the good".`,
       },
     ],
@@ -70,10 +73,18 @@ const all = [
   },
 ];
 
+function durationCalc(lessons) {
+  const seconds = lessons.reduce((accumulator, currentValue) => {
+    return accumulator + toSeconds(parse(currentValue.duration));
+  }, 0);
+  return prettyMilliseconds(seconds * 1000, { compact: true });
+}
+
 const units = all.map((unit) => {
   return {
     ...unit,
     ...{
+      duration: durationCalc(unit.lessons),
       description: unit.description.replace(/^\t{3}/gm, ""),
     },
   };

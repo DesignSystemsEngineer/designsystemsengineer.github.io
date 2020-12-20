@@ -58,7 +58,7 @@
     <CourseSummary
       title={course.title}
       description={course.description}
-      videoCount={course.videoCount}
+      videoCount={course.lessons.length}
       duration={course.duration}
       isLarge={true}
       imageUrl={course.image} />

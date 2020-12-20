@@ -64,13 +64,17 @@
       {#if lesson.code}
       <div class="dse-lesson__code">
         <Heading class="dse-lesson__title" size="XL">Code</Heading>
+        {#if lesson.code.start}
         <CodePenEmbed
           slug={lesson.code.start}
           codepenTitle="DSE Button Start" />
           <br/>
+        {/if}
+        {#if lesson.code.completed}
         <CodePenEmbed
           slug={lesson.code.completed}
           codepenTitle="DSE Button" showCodePen={false}/>
+        {/if}
       </div>
       {/if}
       <div class="dse-lesson__transcript">

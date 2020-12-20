@@ -10,16 +10,7 @@
 </script>
 
 <script>
-  import { parse, toSeconds } from "iso8601-duration";
-  import prettyMilliseconds from "pretty-ms";
   export let units;
-
-  function durationCalc(lessons) {
-    const seconds = lessons.reduce((accumulator, currentValue) => {
-      return accumulator + toSeconds(parse(currentValue.duration));
-    }, 0);
-    return prettyMilliseconds(seconds * 1000, { compact: true });
-  }
 </script>
 
 <style>
@@ -45,7 +36,7 @@
       <CourseSummary
         {title}
         videoCount={lessons.length}
-        duration={durationCalc(lessons)}
+        {duration}
         {description}
         courseUrl="/courses/{slug}"
         imageUrl={image}
