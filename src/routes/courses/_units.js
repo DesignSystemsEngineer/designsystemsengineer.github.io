@@ -46,6 +46,12 @@ const all = [
         duration: "PT4M41S",
         description: `Ok, let's take a look at what you made. There are so many ways to accomplish this task, and I wanted to try to highlight that. There isn't a perfect way, at least I haven't found it, but avoid letting "the perfect" become the enemy of "the good".`,
       },
+      {
+        slug: "dse-textinput",
+        title: "DSE Textinput",
+        duration: "PT8M8S",
+        description: "Let's take a stab at a second component. Our button is a good start, so let's make a companion form input. We'll make a text input that is designed to pair with our button for a simple form like a login or a subscription form.",
+      },
     ],
   },
   {
