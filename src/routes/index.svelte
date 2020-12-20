@@ -21,7 +21,7 @@
 </style>
 
 <svelte:head>
-  <title>Sapper project template</title>
+  <title>Design Systems Engineer</title>
 </svelte:head>
 
 <Page>
