@@ -1,5 +1,5 @@
 <script>
-  import { Button, Heading, Grid, GridItem, Page } from "@dsengineer/svelte";
+  import { Button, Heading, Grid, GridItem, Page, Link } from "@dsengineer/svelte";
 </script>
 
 <style>
@@ -84,6 +84,9 @@
   </div>
   <Grid class="content">
     <GridItem colSpan="6">
+      <div style="height:60px;"/>
+      <Heading size="L"><span style="font-weight: 600;">Let's make your products feel like they below together.</span></Heading>
+      <div style="font-size: 1.2rem;">
       <p>
         The Design Systems Engineering course content is built for engineers to
         follow me along the path as we together create an entire Design System.
@@ -109,7 +112,10 @@
         augment it with additional features.
       </p>
 
-      <p>Subscribe Now</p>
+      <p>
+        Get a heads-up when Design System Engineer launches! <Link href="https://backyard-studio.ck.page/ad40317bf0">Subscribe Now!</Link>
+      </p>
+      </div>
     </GridItem>
   </Grid>
 </Page>
