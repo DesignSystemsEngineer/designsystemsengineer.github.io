@@ -6,8 +6,8 @@ summary: Ok, let's take a look at what you made. There are so many ways to accom
 embed: <iframe width="560" height="315" src="https://www.youtube.com/embed/KATX34IqGqc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 courseSlug: css-design-system-components
 code:
-  start: https://codepen.io/GarthDB/pen/ExyrgOz
-  completed: https://codepen.io/GarthDB/pen/wvWLJZv
+  start: ExyrgOz
+  completed: wvWLJZv
 ---
 
 Now that we've made our first component, let's go to our first solo activity. You're going to take our existing button and create a call to action variant, a button that is similar to our first button, but that draws the attention a little more. I've set you up a code pen to get you started. You can fork it and save it to your own account if you want to save your progress. But let me show you what we have. You can see that we have our button that we styled, like we did our last one.

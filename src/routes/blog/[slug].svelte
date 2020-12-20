@@ -15,7 +15,7 @@
 
 <script>
   export let post;
-  import {Grid, GridItem} from "@dsengineer/svelte";
+  import { Grid, GridItem } from "@dsengineer/svelte";
 </script>
 
 <style>
@@ -29,10 +29,9 @@
   <title>{post.title}</title>
 </svelte:head>
 
-
 <Grid class="content">
   <GridItem colSpan="6">
-  <h1>{post.title}</h1>
-  {@html post.html}
+    <h1>{post.title}</h1>
+    {@html post.html}
   </GridItem>
 </Grid>

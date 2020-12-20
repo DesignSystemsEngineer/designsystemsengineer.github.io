@@ -10,7 +10,7 @@ const contents = JSON.stringify(
       duration: unit.duration,
       description: unit.description,
       lessons: unit.lessons,
-      image: unit.image
+      image: unit.image,
     };
   })
 );

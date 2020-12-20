@@ -15,7 +15,14 @@
 
 <script>
   export let course;
-  import {Grid, GridItem, CourseSummary, Heading, Button, Link} from "@dsengineer/svelte";
+  import {
+    Grid,
+    GridItem,
+    CourseSummary,
+    Heading,
+    Button,
+    Link,
+  } from "@dsengineer/svelte";
 </script>
 
 <style>
@@ -41,7 +48,6 @@
   <title>{course.title}</title>
 </svelte:head>
 
-
 <Grid class="content">
   <GridItem colSpan="3">
     <Heading size="XL">Design Systems Engineer</Heading>
@@ -49,16 +55,30 @@
   </GridItem>
 
   <GridItem colSpan="6">
-    <CourseSummary title={course.title} description={course.description} videoCount={course.videoCount} duration={course.duration} isLarge={true} imageUrl={course.image}/>
+    <CourseSummary
+      title={course.title}
+      description={course.description}
+      videoCount={course.videoCount}
+      duration={course.duration}
+      isLarge={true}
+      imageUrl={course.image} />
     <div class="dse-course-summary__lessonList">
-    {#each course.lessons as {title, description, slug}}
-      <hr class="dse-hr"/>
-      <div class="dse-course-summary__lesson">
-        <Heading size="L"><Link href="/lessons/{slug}">{title}</Link></Heading>
-        <div class="dse-lesson__description">{description}</div>
-        <Button isLarge={true} isCTA={true} href="/lessons/{slug}" iconId="play">Start Watching</Button>
-      </div>
-    {/each}
+      {#each course.lessons as { title, description, slug }}
+        <hr class="dse-hr" />
+        <div class="dse-course-summary__lesson">
+          <Heading size="L">
+            <Link href="/lessons/{slug}">{title}</Link>
+          </Heading>
+          <div class="dse-lesson__description">{description}</div>
+          <Button
+            isLarge={true}
+            isCTA={true}
+            href="/lessons/{slug}"
+            iconId="play">
+            Start Watching
+          </Button>
+        </div>
+      {/each}
     </div>
   </GridItem>
 </Grid>

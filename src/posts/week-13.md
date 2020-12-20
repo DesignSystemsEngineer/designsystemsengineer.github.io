@@ -1,7 +1,7 @@
 ---
 title: Week 13
 slug: week-13
-summary: Topic mapping
+summary: Project reflection
 date: 2020-11-27
 ---
 

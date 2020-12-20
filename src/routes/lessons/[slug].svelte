@@ -15,7 +15,8 @@
 
 <script>
   export let lesson;
-  import {Grid, GridItem, Heading, Link} from "@dsengineer/svelte";
+  import { Grid, GridItem, Heading, Link } from "@dsengineer/svelte";
+  import CodePenEmbed from "../../components/CodePenEmbed.svelte";
 </script>
 
 <style>
@@ -35,7 +36,8 @@
     width: 100%;
     height: 100%;
   }
-  .dse-lesson__description, .dse-lesson__transcript {
+  .dse-lesson__description,
+  .dse-lesson__transcript {
     font-size: 1.15rem;
     margin: 20px 0;
   }
@@ -45,30 +47,34 @@
   <title>{lesson.title}</title>
 </svelte:head>
 
-
 <Grid class="content">
   <GridItem colSpan="3">
     <Heading size="M">Design Systems Engineer</Heading>
-    <Link href="courses/{lesson.courseSlug}" iconId="back-chevron">Back to lesson list</Link>
+    <Link href="courses/{lesson.courseSlug}" iconId="back-chevron">
+      Back to lesson list
+    </Link>
   </GridItem>
   <GridItem colSpan="6">
-  <div class="dse-lesson">
-    <Heading class="dse-lesson__title" size="XXL">{lesson.title}</Heading>
-    <div class="dse-lesson__description">{lesson.summary}</div>
-    <div class="videoWrapper">
-      {@html lesson.embed}
+    <div class="dse-lesson">
+      <Heading class="dse-lesson__title" size="XXL">{lesson.title}</Heading>
+      <div class="dse-lesson__description">{lesson.summary}</div>
+      <div class="videoWrapper">
+        {@html lesson.embed}
+      </div>
+      <div class="dse-lesson__code">
+        <Heading class="dse-lesson__title" size="XL">Code</Heading>
+        <CodePenEmbed
+          slug={lesson.code.start}
+          codepenTitle="DSE Button Start" />
+          <br/>
+        <CodePenEmbed
+          slug={lesson.code.completed}
+          codepenTitle="DSE Button" showCodePen={false}/>
+      </div>
+      <div class="dse-lesson__transcript">
+        <Heading class="dse-lesson__title" size="XL">Video Transcript</Heading>
+        {@html lesson.transcript}
+      </div>
     </div>
-    <div class="dse-lesson__code">
-      <Heading class="dse-lesson__title" size="XL">Resource</Heading>
-      <ul>
-        <li><a href={lesson.code.start} target=”_blank”>Starting CodePen</a></li>
-        <li><a href={lesson.code.completed} target=”_blank”>Completed CodePen</a></li>
-      </ul>
-    </div>
-    <div class="dse-lesson__transcript">
-      <Heading class="dse-lesson__title" size="XL">Video Transcript</Heading>
-      {@html lesson.transcript}
-    </div>
-  </div>
   </GridItem>
 </Grid>

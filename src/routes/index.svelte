@@ -1,12 +1,5 @@
 <script>
-  import {
-    Button,
-    Heading,
-    Grid,
-    GridItem,
-    Page,
-    Input,
-  } from "@dsengineer/svelte";
+  import { Button, Heading, Grid, GridItem, Page } from "@dsengineer/svelte";
 </script>
 
 <style>
@@ -38,7 +31,10 @@
     </GridItem>
     <GridItem colSpan="3" />
     <GridItem colSpan="6">
-      <img class="glacierImg" src="/glacier.jpg" alt="Hidden Lake at Glacier National Park"/>
+      <img
+        class="glacierImg"
+        src="/glacier.jpg"
+        alt="Hidden Lake at Glacier National Park" />
     </GridItem>
     <GridItem colSpan="6">
       <p>

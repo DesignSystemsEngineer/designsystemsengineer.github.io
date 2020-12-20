@@ -1,5 +1,5 @@
 <script>
-  import { stores } from '@sapper/app';
+  import { stores } from "@sapper/app";
   const { page } = stores();
   import { Page, Nav } from "@dsengineer/svelte";
   // import Nav from "../components/Nav.svelte";
@@ -19,7 +19,7 @@
       label: "Blog",
       href: "/blog",
     },
-  ]
+  ];
   export let currentPage;
   $: currentPage = $page.path;
 </script>
@@ -38,8 +38,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" />
   <link
     href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;900&display=swap"
-    rel="stylesheet"
-  />
+    rel="stylesheet" />
   <style>
     body {
       min-height: 100vh;
@@ -51,6 +50,6 @@
 </svelte:head>
 
 <Page>
-  <Nav navItems={navItems} currentPage={currentPage} />
+  <Nav {navItems} {currentPage} />
   <slot />
 </Page>

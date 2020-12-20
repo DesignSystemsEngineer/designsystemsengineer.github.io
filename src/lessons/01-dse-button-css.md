@@ -6,8 +6,8 @@ summary: Let's create the first component. We'll take a sprite sheet design file
 embed: <iframe width="560" height="349" src="https://www.youtube.com/embed/Q4F0yIz8wL8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 courseSlug: css-design-system-components
 code:
-  start: https://codepen.io/GarthDB/pen/mdEZWRj
-  completed: https://codepen.io/GarthDB/pen/jOrXyWW
+  start: mdEZWRj
+  completed: jOrXyWW
 ---
 
 Now that we've made our first component, let's go to our first solo activity. You're going to take our existing button and create a call to action variant, a button that is similar to our first button, but that draws the attention a little more. I've set you up a code pen to get you started. You can fork it and save it to your own account if you want to save your progress. But let me show you what we have. You can see that we have our button that we styled, like we did our last one.
