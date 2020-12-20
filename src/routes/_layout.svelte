@@ -2,6 +2,7 @@
   import { stores } from "@sapper/app";
   const { page } = stores();
   import { Page, Nav } from "@dsengineer/svelte";
+  import HomeHeader from '../components/HomeHeader.svelte';
   // import Nav from "../components/Nav.svelte";
   import "@dsengineer/tokens/lib/default.css";
   import "@dsengineer/tokens/lib/medium.css";
@@ -49,7 +50,14 @@
   </style>
 </svelte:head>
 
+{#if currentPage != '/'}
 <Page>
   <Nav {navItems} {currentPage} />
   <slot />
 </Page>
+{:else}
+<Page>
+  <HomeHeader/>
+  <slot />
+</Page>
+{/if}
