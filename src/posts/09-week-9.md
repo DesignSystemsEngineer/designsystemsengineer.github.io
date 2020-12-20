@@ -1,5 +1,5 @@
 ---
-title: Week 9
+title: Topic mapping activity
 slug: week-9
 summary: Topic mapping
 date: 2020-10-30
@@ -13,4 +13,4 @@ The sticky notes' color relates to the different times I added items; each time,
 
 The top section notes are prerequisites. Things the students will need to have previous experience with if they want to follow. The main middle area is the capstone topic items. The section to the right is out of scope topics.
 
-![Planning map](/planning-activity-mapping.png)
+<img src="/planning-activity-mapping.png" style="max-width: 100%" alt="planning map"/>

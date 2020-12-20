@@ -1,5 +1,5 @@
 ---
-title: Week 6
+title: How to start the course
 slug: week-6
 summary: Design system polishing.
 date: 2020-10-9

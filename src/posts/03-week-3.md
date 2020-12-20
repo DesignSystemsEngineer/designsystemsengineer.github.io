@@ -1,5 +1,5 @@
 ---
-title: Week 3
+title: Breaking things in Style Dictionary
 slug: week-3
 summary: A week of research.
 date: 2020-09-18

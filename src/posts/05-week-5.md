@@ -1,5 +1,5 @@
 ---
-title: Week 5
+title: Humdrum monorepo
 slug: week-5
 summary: A week of research.
 date: 2020-10-02

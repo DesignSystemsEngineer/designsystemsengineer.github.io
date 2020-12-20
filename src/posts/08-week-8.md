@@ -1,5 +1,5 @@
 ---
-title: Week 8
+title: Final Rubric
 slug: week-8
 summary: Final Rubric.
 date: 2020-10-23

@@ -1,5 +1,5 @@
 ---
-title: Week 4
+title: Humdrum Svelte
 slug: week-4
 summary: Humdrum Svelte.
 date: 2020-09-25
