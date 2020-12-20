@@ -39,9 +39,6 @@
     font-size: 1.15rem;
     margin: 20px 0;
   }
-  .dse-lesson__title {
-    text-align: center
-  }
 </style>
 
 <svelte:head>

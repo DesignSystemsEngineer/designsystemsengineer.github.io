@@ -4,7 +4,7 @@ slug: dse-button-css-activity-review
 duration: PT1M49S
 summary: Ok, let's take a look at what you made. There are so many ways to accomplish this task, and I wanted to try to highlight that. There isn't a perfect way, at least I haven't found it, but avoid letting "the perfect" become the enemy of "the good".
 embed: <iframe width="560" height="315" src="https://www.youtube.com/embed/KATX34IqGqc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-course-slug: css-design-system-components
+courseSlug: css-design-system-components
 code:
   start: https://codepen.io/GarthDB/pen/ExyrgOz
   completed: https://codepen.io/GarthDB/pen/wvWLJZv

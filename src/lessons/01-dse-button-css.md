@@ -4,7 +4,7 @@ slug: dse-button-css
 duration: PT10M2S
 summary: Let's create the first component. We'll take a sprite sheet design file and create the CSS for the component in CodePen. This will allow us to get started very quickly without having to worry about setting up dev environments. We can even distribute the components and nest them.
 embed: <iframe width="560" height="349" src="https://www.youtube.com/embed/Q4F0yIz8wL8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-course-slug: css-design-system-components
+courseSlug: css-design-system-components
 code:
   start: https://codepen.io/GarthDB/pen/mdEZWRj
   completed: https://codepen.io/GarthDB/pen/jOrXyWW

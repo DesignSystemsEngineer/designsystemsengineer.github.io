@@ -4,7 +4,7 @@ slug: dse-button-css-activity
 duration: PT1M49S
 summary: Time to fly solo for a bit. Now that you've gone through the process of making a simple component, how would you extend it to a Call To Action variant (emphasized). I've set up a starting CodePen for you to get started, and if you get stuck we can look through it together in the next video. I've also included the solution if you don't know where to start.
 embed: <iframe width="560" height="315" src="https://www.youtube.com/embed/KATX34IqGqc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-course-slug: css-design-system-components
+courseSlug: css-design-system-components
 code:
   start: https://codepen.io/GarthDB/pen/ExyrgOz
   completed: https://codepen.io/GarthDB/pen/wvWLJZv
