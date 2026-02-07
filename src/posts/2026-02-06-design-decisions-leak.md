@@ -1,7 +1,7 @@
 ---
 title: Design Decisions Don’t Disappear; They Leak
 description: When teams don’t make design decisions explicit, they don’t stay undecided. They leak into systems in ways that are hard to see and harder to undo.
-date: 2025-02-06
+date: 2026-02-06
 tags:
   - design systems
   - design decisions
