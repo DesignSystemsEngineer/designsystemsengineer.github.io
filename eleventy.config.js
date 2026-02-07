@@ -14,6 +14,10 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addCollection("references", function (collectionApi) {
     return collectionApi.getFilteredByGlob("**/references/*.md");
   });
+  eleventyConfig.addFilter("slugifyTag", (tag) => {
+    if (!tag || typeof tag !== "string") return "";
+    return tag.toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9-]/g, "");
+  });
   eleventyConfig.addCollection("tagPages", function (collectionApi) {
     const posts = collectionApi.getFilteredByGlob("**/posts/*.md").sort((a, b) => b.date - a.date);
     const byTag = {};
@@ -24,7 +28,11 @@ module.exports = function (eleventyConfig) {
         byTag[tag].push(p);
       });
     });
-    return Object.entries(byTag).map(([tag, tagPosts]) => ({ tag, posts: tagPosts }));
+    return Object.entries(byTag).map(([tag, tagPosts]) => ({
+      tag,
+      slug: tag.toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9-]/g, ""),
+      posts: tagPosts,
+    }));
   });
 
   eleventyConfig.addFilter("formatDate", (dateObj, format) => {

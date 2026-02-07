@@ -8,6 +8,6 @@ layout: layouts/base.njk
   </header>
   {{ content | safe }}
   {% if tags and tags | length %}
-  <p class="tags"><strong>Tags:</strong> {% for tag in tags %}<a href="/writing/tag/{{ tag }}/">{{ tag }}</a>{% if not loop.last %}, {% endif %}{% endfor %}</p>
+  <p class="tags"><strong>Tags:</strong> {% for tag in tags %}<a href="/writing/tag/{{ tag | slugifyTag }}/">{{ tag }}</a>{% if not loop.last %}, {% endif %}{% endfor %}</p>
   {% endif %}
 </article>

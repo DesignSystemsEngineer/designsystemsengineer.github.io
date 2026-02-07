@@ -1,89 +1,103 @@
 ---
-title: Design Decisions Don't Disappear — They Leak
-description: If design decisions aren't explicitly captured, they leak into people, tools, and assumptions—creating hidden costs that compound over time.
+title: Design Decisions Don’t Disappear — They Leak
+description: When teams don’t make design decisions explicit, they don’t stay undecided. They leak into systems in ways that are hard to see and harder to undo.
 date: 2025-02-06
 tags:
-  - codification
-  - decision-making
-  - design-systems
+  - design systems
+  - design decisions
+  - scale
 ---
 
-Teams often talk about design decisions as if they're binary. Either a decision has been made, or it hasn't. If it hasn't, the team is still being flexible.
+Teams often talk about design decisions as if they’re binary: either decided or not.
 
-In practice, that distinction doesn't hold.
+In practice, an undecided decision still shapes behavior. It just hides the cost.
 
-When a team decides to "decide later," work continues. Designs ship. Code lands. Choices get made—just without being named as choices.
+When teams defer decisions, they don’t disappear. They leak into the system through whatever paths are available.
 
-What this reveals is simple: **inaction is still a decision.** It just shifts who makes it and obscures accountability for the outcome.
+## Undecided doesn’t mean neutral
 
-## The comforting myth of "we'll decide later"
+Design decisions are rarely optional. If a decision isn’t made explicitly, the system still needs an answer.
 
-"Let's decide later" is usually said to keep momentum. It avoids debate and preserves the appearance of optionality.
+So it invents one.
 
-But undecided does not mean untouched.
+That answer might come from:
+- whoever ships first
+- whoever has the strongest opinion in the room
+- whatever tool or framework sets a default
+- whatever pattern already exists nearby
 
-Spacing values get set because something had to ship. A component API hardens because it was reused. A pattern becomes "the standard" because no one challenged it early.
+None of these are inherently wrong. The problem is that they’re implicit, uneven, and hard to reason about later.
 
-The decision wasn't deferred. It was made implicitly, under time pressure, and without a clear owner. When the cost shows up later, there's no obvious place to revisit it.
+Inaction is still a decision — it’s just one you didn’t name.
 
-## Where decisions actually go when you don't codify them
+## Where decisions leak
 
-When decisions aren't explicitly captured, they don't disappear. They leak into whatever containers are available:
+When decisions aren’t captured, they leak into containers that aren’t designed to hold them:
 
-- People's heads
-- Slack threads
-- Meetings
-- Figma files
-- Specs and tickets
-- Code comments
-- Assumptions copied forward
+- people’s heads  
+- Slack threads and meeting notes  
+- tickets and specs  
+- Figma files  
+- code comments and APIs  
 
-These containers are optimized for speed, not durability.
+These containers are optimized for velocity, not durability.
 
-They help teams move quickly in the moment. They do not preserve intent over time. None of them make decisions easy to review, compare, evolve, or retire.
+For example: when naming conventions aren’t decided, the first engineer to touch an API picks something that “feels right.” Six months later, that name is imported across multiple repos, documented in examples, and depended on by downstream teams. What started as a local choice quietly becomes global policy.
 
-As a result, teams lose the ability to distinguish between what was intentional and what was merely expedient.
+At that point, changing it isn’t a design decision anymore. It’s a migration problem.
 
-## Why this gets exponentially worse at scale
+## Leakage compounds at scale
 
-Decision leakage is manageable when teams are small and time horizons are short. It becomes corrosive as organizations grow.
+Decision leakage is manageable in small teams with short time horizons.
 
-More people introduce more interpretations of what a decision meant. More products create more local variations justified as exceptions. More time produces drift from the original intent.
+As systems grow, it compounds.
 
-The symptoms are familiar: painful onboarding, subtle inconsistencies, repeated debates that never quite resolve. Someone eventually asks, "Why did we do it this way?" and no one can answer with confidence.
+New teams inherit patterns without context. New platforms re-implement behavior by copying what exists. Automation encodes assumptions that were never articulated.
 
-At scale, ambiguity doesn't stay neutral. It compounds.
+Over time, the system reflects a patchwork of decisions made at different moments, by different people, under different constraints — with no shared explanation for *why* things are the way they are.
+
+The cost isn’t just inconsistency. It’s fragility.
 
 ## The hidden cost: expert dependency
 
-Over time, leaked decisions concentrate in people.
+One of the clearest signs of decision leakage is when progress depends on specific people.
 
-Certain designers or engineers become the ones everyone asks. They remember why something exists. They know which edge cases matter. They can explain what's allowed versus what's merely tolerated.
+If someone has to ask:
+- “What’s the right way to do this?”
+- “Why is this component structured like that?”
+- “Are we allowed to change this?”
 
-This creates a fragile system.
+—and the only reliable answer lives in a person’s memory, the system isn’t carrying its own weight.
 
-Knowledge doesn't scale with the organization. It scales with availability. Senior contributors become bottlenecks—not by intent, but by necessity.
-
-What breaks isn't velocity. It's trust in the system itself.
+The organization becomes dependent on experts not just for judgment, but for basic continuity.
 
 ## Design systems as decision infrastructure
 
-This is where common definitions of design systems fall short.
+A design system isn’t just a collection of components. It’s an attempt to make decisions explicit enough that they can be reused safely.
 
-A design system is not a UI library. It's not a Figma file. It's not documentation.
+That means:
+- naming decisions
+- constraining them
+- documenting tradeoffs
+- versioning change
+- making intent legible to people who weren’t in the room
 
-Those are artifacts.
+When a decision can be named, typed, and referenced, it’s less likely to leak.
 
-The real problem design systems exist to address is decision leakage. At their best, they function as **decision infrastructure**: a way to make design decisions explicit, reviewable, and reusable over time.
+When it can’t, the system will still answer — just in ways that are harder to see and harder to undo.
 
-When decisions are named and structured, they can survive new teams, new platforms, and inevitable change. When they aren't, entropy wins quietly.
+## Questions worth asking
 
-## What to notice in your own organization
-
-Before thinking about solutions, it's worth observing a few things:
+If you want to understand where decisions are leaking in your system, ask:
 
 - Where do design decisions live today?
-- Who do people ask when they're unsure?
-- What breaks when those people aren't available?
+- Which decisions exist only in people’s heads?
+- Who do people ask when they’re unsure?
+- What breaks when those people aren’t available?
+- Which defaults have become “rules” without ever being agreed on?
 
-Those answers reveal far more about the state of a design system than any component inventory ever will.
+You don’t need perfect answers. You just need to make the invisible visible.
+
+Because design decisions don’t disappear.
+
+They leak.
