@@ -1,5 +1,5 @@
 ---
-title: Design Decisions Don’t Disappear — They Leak
+title: Design Decisions Don’t Disappear; They Leak
 description: When teams don’t make design decisions explicit, they don’t stay undecided. They leak into systems in ways that are hard to see and harder to undo.
 date: 2025-02-06
 tags:
@@ -28,7 +28,7 @@ That answer might come from:
 
 None of these are inherently wrong. The problem is that they’re implicit, uneven, and hard to reason about later.
 
-Inaction is still a decision — it’s just one you didn’t name.
+Inaction is still a decision - it’s just one you didn’t name.
 
 ## Where decisions leak
 
@@ -54,7 +54,7 @@ As systems grow, it compounds.
 
 New teams inherit patterns without context. New platforms re-implement behavior by copying what exists. Automation encodes assumptions that were never articulated.
 
-Over time, the system reflects a patchwork of decisions made at different moments, by different people, under different constraints — with no shared explanation for *why* things are the way they are.
+Over time, the system reflects a patchwork of decisions made at different moments, by different people, under different constraints - with no shared explanation for *why* things are the way they are.
 
 The cost isn’t just inconsistency. It’s fragility.
 
@@ -67,7 +67,7 @@ If someone has to ask:
 - “Why is this component structured like that?”
 - “Are we allowed to change this?”
 
-—and the only reliable answer lives in a person’s memory, the system isn’t carrying its own weight.
+-and the only reliable answer lives in a person’s memory, the system isn’t carrying its own weight.
 
 The organization becomes dependent on experts not just for judgment, but for basic continuity.
 
@@ -84,7 +84,7 @@ That means:
 
 When a decision can be named, typed, and referenced, it’s less likely to leak.
 
-When it can’t, the system will still answer — just in ways that are harder to see and harder to undo.
+When it can’t, the system will still answer - just in ways that are harder to see and harder to undo.
 
 ## Questions worth asking
 

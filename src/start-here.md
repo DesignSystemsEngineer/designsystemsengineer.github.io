@@ -8,9 +8,9 @@ This site is a thought-leadership project about **codifying design decisions**: 
 
 **What you'll find here**
 
-- **Writing** — Essays and posts on decision-making, design systems, and codification.
-- **Frameworks** — Mental models and scales (e.g. the Codification Ladder) to structure how you think.
-- **References** — Checklists, schemas, and templates you can use when documenting decisions.
+- **Writing** - Essays and posts on decision-making, design systems, and codification.
+- **Frameworks** - Mental models and scales (e.g. the Codification Ladder) to structure how you think.
+- **References** - Checklists, schemas, and templates you can use when documenting decisions.
 
 **How to navigate**
 

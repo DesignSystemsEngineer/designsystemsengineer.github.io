@@ -19,7 +19,7 @@ The emphasis here is practical and structural. Less about tools. More about mech
 - References, checklists, and patterns drawn from real systems
 - Notes on designer–engineer collaboration and handoff
 
-The goal is to reduce ambiguity, rework, and fragility—without turning systems into rigid bureaucracy.
+The goal is to reduce ambiguity, rework, and fragility-without turning systems into rigid bureaucracy.
 
 ## Who this is for
 
@@ -36,7 +36,7 @@ If you care about consistency and adaptability, this work is for you.
 
 **Design Systems Engineer** is written by [Garth Braithwaite](https://garthdb.com/), based on hands-on experience building and maintaining design system infrastructure in production environments.
 
-This project exists to turn that experience into reusable thinking—and to make design decisions easier to reason about, change, and trust.
+This project exists to turn that experience into reusable thinking-and to make design decisions easier to reason about, change, and trust.
 
 ## Contact
 
