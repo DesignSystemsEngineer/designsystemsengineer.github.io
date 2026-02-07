@@ -7,12 +7,17 @@
     "build": "eleventy",
     "serve": "eleventy --serve"
   },
-  "keywords": ["eleventy", "design-systems", "blog"],
+  "keywords": [
+    "eleventy",
+    "design-systems",
+    "blog"
+  ],
   "author": "",
   "license": "MIT",
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",
     "@11ty/eleventy-plugin-rss": "^2.0.0",
-    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0"
+    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
+    "markdown-it": "^14.1.0"
   }
 }

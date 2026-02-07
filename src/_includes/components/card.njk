@@ -4,9 +4,9 @@
   <p class="card__desc">{{ item.data.description }}</p>
   {% endif %}
   {% if item.data.date %}
-  <p class="card__meta">{{ item.data.date | formatDate('MMMM d, yyyy') }}</p>
+  <p class="card__meta card__date">{{ item.data.date | formatDate('MMMM d, yyyy') }}</p>
   {% endif %}
   {% if item.data.tags and item.data.tags | length %}
-  <p class="card__meta">{{ item.data.tags | join(', ') }}</p>
+  <p class="card__meta card__tags">{% for tag in item.data.tags %}<a href="/writing/tag/{{ tag }}/">{{ tag }}</a>{% if not loop.last %}, {% endif %}{% endfor %}</p>
   {% endif %}
 </article>

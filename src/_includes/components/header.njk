@@ -16,7 +16,7 @@
   <nav class="nav" aria-label="Main">
     <ul class="nav__list">
       {% for item in navigation %}
-      <li class="nav__item"><a href="{{ item.url }}">{{ item.label }}</a></li>
+      <li class="nav__item"><a href="{{ item.url }}"{% if page.url == item.url or (page.url.startsWith(item.url) and item.url != '/') %} aria-current="page"{% endif %}>{{ item.label }}</a></li>
       {% endfor %}
     </ul>
   </nav>

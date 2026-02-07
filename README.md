@@ -4,7 +4,7 @@ A content-first thought-leadership site for codifying design decisions. Built wi
 
 ## Local development
 
-This project uses [proto](https://moonrepo.dev/proto) for Node version management. Node 20 (LTS) is pinned in [`.prototools`](.prototools).
+This project uses [proto](https://moonrepo.dev/proto) only for Node version management (not nvm). Node 20 (LTS) is pinned in [`.prototools`](.prototools).
 
 1. **Install Node via proto** (if not already installed):
    ```bash

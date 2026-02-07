@@ -1,0 +1,19 @@
+---
+layout: layouts/base.njk
+title: "Tag: {{ tagData.tag }}"
+pagination:
+  data: collections.tagPages
+  size: 1
+  alias: tagData
+permalink: "/writing/tag/{{ tagData.tag }}/"
+eleventyComputed:
+  title: "Tag: {{ tagData.tag }}"
+---
+<article class="content-width">
+  <h1 class="page-title">Tag: {{ tagData.tag }}</h1>
+  <ul class="card-grid">
+    {% for post in tagData.posts %}
+    <li>{% set item = post %}{% include "components/card.njk" %}</li>
+    {% endfor %}
+  </ul>
+</article>

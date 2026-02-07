@@ -5,22 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{% if title %}{{ title }} | {% endif %}{{ metadata.title }}</title>
     <meta name="description" content="{{ description or metadata.description }}" />
-    <link rel="icon" type="image/png" href="/favicon.png" />
+    
+    <!-- Preconnect to external domains for performance -->
+    <link rel="preconnect" href="https://www.googletagmanager.com" />
+    <link rel="preconnect" href="https://backyard-studio.ck.page" />
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+    <link rel="dns-prefetch" href="https://backyard-studio.ck.page" />
+    
+    <!-- Favicons -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    
+    <!-- RSS Feed -->
     <link rel="alternate" type="application/rss+xml" title="{{ metadata.title }} RSS" href="{{ metadata.url }}/feed.xml" />
+    
+    <!-- Open Graph / Social Media -->
     <meta property="og:title" content="{% if title %}{{ title }} | {% endif %}{{ metadata.title }}" />
     <meta property="og:description" content="{{ description or metadata.description }}" />
     <meta property="og:url" content="{{ metadata.url }}{{ page.url }}" />
+    <meta property="og:type" content="website" />
+    
+    <!-- Styles -->
     <link rel="stylesheet" href="/assets/css/main.css" />
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZTPCVPPKH4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){ dataLayer.push(arguments); }
+      gtag('js', new Date());
+      gtag('config', 'G-ZTPCVPPKH4');
+    </script>
   </head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZTPCVPPKH4"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){ dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-ZTPCVPPKH4');
-  </script>
   <body>
     <a href="#main-content" class="skip-link">Skip to content</a>
     <div class="wrapper">

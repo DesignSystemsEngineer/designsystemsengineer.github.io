@@ -14,6 +14,18 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addCollection("references", function (collectionApi) {
     return collectionApi.getFilteredByGlob("**/references/*.md");
   });
+  eleventyConfig.addCollection("tagPages", function (collectionApi) {
+    const posts = collectionApi.getFilteredByGlob("**/posts/*.md").sort((a, b) => b.date - a.date);
+    const byTag = {};
+    posts.forEach((p) => {
+      (p.data.tags || []).forEach((tag) => {
+        if (tag === "post") return;
+        if (!byTag[tag]) byTag[tag] = [];
+        byTag[tag].push(p);
+      });
+    });
+    return Object.entries(byTag).map(([tag, tagPosts]) => ({ tag, posts: tagPosts }));
+  });
 
   eleventyConfig.addFilter("formatDate", (dateObj, format) => {
     if (!dateObj || !(dateObj instanceof Date)) return "";
