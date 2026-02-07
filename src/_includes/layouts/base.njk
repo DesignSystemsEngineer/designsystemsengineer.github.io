@@ -18,8 +18,15 @@
     <script>
       (function() {
         var d = window.matchMedia('(prefers-color-scheme: dark)');
-        var l = document.querySelector('link[rel="icon"][type="image/svg+xml"]');
-        function u(e) { l.href = e.matches ? '/favicon-dark.svg' : '/favicon-light.svg'; }
+        function u(e) {
+          var old = document.querySelector('link[rel="icon"][type="image/svg+xml"]');
+          var n = document.createElement('link');
+          n.rel = 'icon';
+          n.type = 'image/svg+xml';
+          n.href = (e.matches ? '/favicon-dark.svg' : '/favicon-light.svg') + '?v=' + Date.now();
+          if (old) old.remove();
+          document.head.appendChild(n);
+        }
         u(d);
         d.addEventListener('change', u);
       })();
