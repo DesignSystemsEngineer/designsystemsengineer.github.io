@@ -3,6 +3,9 @@ layout: layouts/base.njk
 ---
 <article class="content-width">
   <h1 class="page-title">{{ title }}</h1>
+  {% if description %}
+  <p class="section-intro">{{ description }}</p>
+  {% endif %}
   <ul class="card-grid">
     {% for item in items or pagination.items %}
     <li>{% include "components/card.njk" %}</li>
