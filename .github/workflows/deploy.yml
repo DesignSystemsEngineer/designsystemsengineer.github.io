@@ -22,10 +22,10 @@ jobs:
           auto-install: true
 
       - name: Install dependencies
-        run: proto run npm ci
+        run: npm ci
 
       - name: Build Eleventy
-        run: proto run npm run build
+        run: npm run build
         env:
           ELEVENTY_ENV: production
 
