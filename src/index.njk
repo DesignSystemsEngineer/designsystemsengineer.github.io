@@ -1,0 +1,38 @@
+---
+layout: layouts/base.njk
+title: Design Systems Engineer
+description: A thought-leadership project for codifying design decisions.
+permalink: /
+---
+
+<div class="content-width prose">
+  <p class="lead">Codifying design decisions is the key leverage point for high-performing product teams. This site explores frameworks, references, and writing to help you get there.</p>
+  <p><a href="/start-here/">Start here</a> to get oriented.</p>
+
+  <h2>Latest writing</h2>
+  <ul class="card-grid">
+    {% for post in collections.posts %}
+    {% if loop.index0 < 3 %}
+    <li>{% set item = post %}{% include "components/card.njk" %}</li>
+    {% endif %}
+    {% endfor %}
+  </ul>
+
+  <h2>Frameworks</h2>
+  <ul class="card-grid">
+    {% for item in collections.frameworks %}
+    {% if loop.index0 < 3 %}
+    <li>{% include "components/card.njk" %}</li>
+    {% endif %}
+    {% endfor %}
+  </ul>
+
+  <h2>References</h2>
+  <ul class="card-grid">
+    {% for item in collections.references %}
+    {% if loop.index0 < 3 %}
+    <li>{% include "components/card.njk" %}</li>
+    {% endif %}
+    {% endfor %}
+  </ul>
+</div>

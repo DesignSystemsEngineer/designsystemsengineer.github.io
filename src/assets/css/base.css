@@ -1,0 +1,24 @@
+/* Reset and base */
+*, *::before, *::after { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: var(--font-base);
+  font-size: var(--type-scale-base);
+  line-height: var(--line-height-normal);
+  color: var(--color-fg);
+  background-color: var(--color-bg);
+}
+
+a {
+  color: var(--color-link);
+  text-decoration: none;
+}
+a:hover { color: var(--color-link-hover); }
+a:focus-visible {
+  outline: var(--focus-ring);
+  outline-offset: var(--focus-ring-offset);
+}
+
+img { max-width: 100%; height: auto; display: block; }
+
+:focus-visible { outline: var(--focus-ring); outline-offset: var(--focus-ring-offset); }
