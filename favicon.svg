@@ -1,1 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 450"><style>:root{--accent-color--primary:#FF3F32;--accent-color--secondary:#00A4BA;--text-color:#242623}@media (prefers-color-scheme:dark){:root{--accent-color--primary:#00A4BA;--accent-color--secondary:#FF3F32;--text-color:#FCF7EE}}</style><path d="M225 0C142.16 0 75 67.16 75 150h150c82.84 0 150 67.16 150 150V0H225z" style="fill:var(--accent-color--primary)"/><path d="M225 150H75c0 82.84 67.16 150 150 150h150c0-82.84-67.16-150-150-150z" style="fill:var(--text-color)"/><path d="M75 150v300h150c82.84 0 150-67.16 150-150H225c-82.84 0-150-67.16-150-150z" style="fill:var(--accent-color--secondary)"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 450">
+  <style>
+    .path-top { fill: #FF3F32; }
+    .path-middle { fill: #242623; }
+    .path-bottom { fill: #00A4BA; }
+    
+    @media (prefers-color-scheme: dark) {
+      .path-top { fill: #00A4BA; }
+      .path-middle { fill: #FCF7EE; }
+      .path-bottom { fill: #FF3F32; }
+    }
+  </style>
+  <path class="path-top" d="M225 0C142.16 0 75 67.16 75 150h150c82.84 0 150 67.16 150 150V0H225z"/>
+  <path class="path-middle" d="M225 150H75c0 82.84 67.16 150 150 150h150c0-82.84-67.16-150-150-150z"/>
+  <path class="path-bottom" d="M75 150v300h150c82.84 0 150-67.16 150-150H225c-82.84 0-150-67.16-150-150z"/>
+</svg>
