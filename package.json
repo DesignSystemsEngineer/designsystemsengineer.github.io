@@ -1,47 +1,23 @@
 {
-  "name": "blog.designsystem.engineer",
-  "description": "The blog to track progress of building DesignSystem.engineer",
-  "version": "0.0.1",
+  "name": "designsystems-engineer",
+  "version": "1.0.0",
+  "description": "Design Systems Engineer — thought-leadership project for codifying design decisions",
   "scripts": {
-    "start": "npm run dev",
-    "dev": "sapper dev",
-    "build": "sapper build --legacy",
-    "export": "sapper export --legacy",
-    "deploy": "npm run export && gh-pages -d __sapper__/export/",
-    "fix:check": "prettier --check './src/**/*.{js,svelte,css,html,json}'",
-    "fix:write": "prettier --write './src/**/*.{js,svelte,css,html,json}'"
+    "start": "eleventy --serve",
+    "build": "eleventy",
+    "serve": "eleventy --serve"
   },
-  "dependencies": {
-    "@dsengineer/svelte": "^3.0.2",
-    "@mheedev/rollup-plugin-markdown": "0.0.6",
-    "compression": "^1.7.1",
-    "iso8601-duration": "^1.3.0",
-    "polka": "next",
-    "postcss": "^8.2.1",
-    "postcss-import": "^14.0.0",
-    "pretty-ms": "^7.0.1",
-    "rollup-plugin-glob": "^1.0.2",
-    "sirv": "^1.0.7",
-    "svelte-preprocess": "^4.6.1"
-  },
+  "keywords": [
+    "eleventy",
+    "design-systems",
+    "blog"
+  ],
+  "author": "",
+  "license": "MIT",
   "devDependencies": {
-    "@babel/core": "^7.0.0",
-    "@babel/plugin-syntax-dynamic-import": "^7.0.0",
-    "@babel/plugin-transform-runtime": "^7.0.0",
-    "@babel/preset-env": "^7.0.0",
-    "@babel/runtime": "^7.0.0",
-    "@rollup/plugin-babel": "^5.0.0",
-    "@rollup/plugin-commonjs": "^14.0.0",
-    "@rollup/plugin-node-resolve": "^8.0.0",
-    "@rollup/plugin-replace": "^2.2.0",
-    "@rollup/plugin-url": "^5.0.0",
-    "gh-pages": "^3.1.0",
-    "prettier": "^2.2.1",
-    "prettier-plugin-svelte": "^1.4.2",
-    "rollup": "^2.3.4",
-    "rollup-plugin-svelte": "^7.0.0",
-    "rollup-plugin-terser": "^7.0.0",
-    "sapper": "^0.28.0",
-    "svelte": "^3.17.3"
+    "@11ty/eleventy": "^3.0.0",
+    "@11ty/eleventy-plugin-rss": "^2.0.0",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
+    "markdown-it": "^14.1.0"
   }
 }

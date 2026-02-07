@@ -1,0 +1,89 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: var(--space-md);
+}
+@media (min-width: 768px) {
+  .wrapper { padding: var(--space-lg); }
+}
+
+.main-content {
+  width: 100%;
+  max-width: var(--wide-width);
+  flex: 1;
+}
+
+.content-width {
+  max-width: var(--content-width);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.site-header {
+  width: 100%;
+  max-width: var(--wide-width);
+  margin-bottom: var(--space-lg);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-md);
+}
+@media (min-width: 768px) {
+  .site-header {
+    margin-bottom: var(--space-xl);
+    gap: var(--space-lg);
+  }
+}
+.logo-link { display: block; }
+.logo { height: 60px; width: auto; }
+@media (min-width: 640px) {
+  .logo { height: 75px; }
+}
+@media (min-width: 1024px) {
+  .logo { height: 90px; }
+}
+.nav__list { display: flex; flex-wrap: wrap; gap: var(--space-sm); list-style: none; margin: 0; padding: 0; }
+@media (min-width: 640px) {
+  .nav__list { gap: var(--space-md); }
+}
+.nav__item { margin: 0; }
+.nav__item a { display: inline-block; padding: var(--space-xs) 0; }
+.nav__item a[aria-current="page"] { font-weight: 600; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 4px; }
+
+.site-footer { margin-top: var(--space-2xl); padding-top: var(--space-lg); border-top: 1px solid var(--color-border); text-align: center; font-size: var(--type-scale-sm); color: var(--color-muted); }
+.site-footer__copyright { margin: 0 0 var(--space-sm); }
+.site-footer__links { margin: 0; }
+.site-footer__links a { color: var(--color-link); }
+
+.skip-link {
+  position: absolute;
+  top: var(--space-sm);
+  left: var(--space-sm);
+  padding: var(--space-sm) var(--space-md);
+  background: var(--color-fg);
+  color: var(--color-bg);
+  z-index: 100;
+  border-radius: 4px;
+}
+.skip-link:not(:focus) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.card-grid {
+  display: grid;
+  gap: var(--space-lg);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+@media (min-width: 640px) {
+  .card-grid { grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
+}

@@ -1,0 +1,53 @@
+:root {
+  /* Colors */
+  --color-bg: #FBF6ED;
+  --color-fg: #242623;
+  --color-link: #00A3B9;
+  --color-link-hover: #008a9e;
+  --color-accent: #FE3F32;
+  --color-muted: #5c5b59;
+  --color-border: #e0ddd6;
+
+  /* Focus */
+  --focus-ring: 2px solid var(--color-link);
+  --focus-ring-offset: 2px;
+
+  /* Typography */
+  --font-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "SF Mono", Consolas, "Liberation Mono", Menlo, monospace;
+  --type-scale-xs: 0.75rem;
+  --type-scale-sm: 0.875rem;
+  --type-scale-base: 1rem;
+  --type-scale-lg: 1.125rem;
+  --type-scale-xl: 1.25rem;
+  --type-scale-2xl: 1.5rem;
+  --type-scale-3xl: 2rem;
+  --line-height-tight: 1.25;
+  --line-height-snug: 1.375;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.625;
+
+  /* Spacing */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+
+  /* Layout */
+  --content-width: 65ch;
+  --wide-width: 1200px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #242623;
+    --color-fg: #fcf7ee;
+    --color-link: #4dd4e0;
+    --color-link-hover: #7ae0ea;
+    --color-accent: #ff6b62;
+    --color-muted: #b5b4b2;
+    --color-border: #3d3c3a;
+  }
+}
