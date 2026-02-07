@@ -1,0 +1,18 @@
+{
+  "name": "designsystems-engineer",
+  "version": "1.0.0",
+  "description": "Design Systems Engineer — thought-leadership project for codifying design decisions",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy",
+    "serve": "eleventy --serve"
+  },
+  "keywords": ["eleventy", "design-systems", "blog"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "@11ty/eleventy-plugin-rss": "^2.0.0",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0"
+  }
+}

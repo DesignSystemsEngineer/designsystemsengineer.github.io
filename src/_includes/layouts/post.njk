@@ -1,0 +1,13 @@
+---
+layout: layouts/base.njk
+---
+<article class="content-width prose">
+  <header>
+    <h1 class="page-title">{{ title }}</h1>
+    <p class="byline">{{ date | formatDate('MMMM d, yyyy') }}{% if tags and tags | length %} · {{ tags | join(', ') }}{% endif %}</p>
+  </header>
+  {{ content | safe }}
+  {% if tags and tags | length %}
+  <p class="tags"><strong>Tags:</strong> {% for tag in tags %}<a href="/writing/tag/{{ tag }}/">{{ tag }}</a>{% if not loop.last %}, {% endif %}{% endfor %}</p>
+  {% endif %}
+</article>

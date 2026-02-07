@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% if title %}{{ title }} | {% endif %}{{ metadata.title }}</title>
+    <meta name="description" content="{{ description or metadata.description }}" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="alternate" type="application/rss+xml" title="{{ metadata.title }} RSS" href="{{ metadata.url }}/feed.xml" />
+    <meta property="og:title" content="{% if title %}{{ title }} | {% endif %}{{ metadata.title }}" />
+    <meta property="og:description" content="{{ description or metadata.description }}" />
+    <meta property="og:url" content="{{ metadata.url }}{{ page.url }}" />
+    <link rel="stylesheet" href="/assets/css/main.css" />
+  </head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZTPCVPPKH4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-ZTPCVPPKH4');
+  </script>
+  <body>
+    <a href="#main-content" class="skip-link">Skip to content</a>
+    <div class="wrapper">
+      {% include "components/header.njk" %}
+      <main id="main-content" class="main-content" role="main">
+        {{ content | safe }}
+      </main>
+      {% include "components/footer.njk" %}
+    </div>
+  </body>
+</html>

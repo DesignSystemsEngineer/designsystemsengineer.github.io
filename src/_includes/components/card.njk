@@ -1,0 +1,12 @@
+<article class="card">
+  <h2 class="card__title"><a href="{{ item.url }}">{{ item.data.title }}</a></h2>
+  {% if item.data.description %}
+  <p class="card__desc">{{ item.data.description }}</p>
+  {% endif %}
+  {% if item.data.date %}
+  <p class="card__meta">{{ item.data.date | formatDate('MMMM d, yyyy') }}</p>
+  {% endif %}
+  {% if item.data.tags and item.data.tags | length %}
+  <p class="card__meta">{{ item.data.tags | join(', ') }}</p>
+  {% endif %}
+</article>
