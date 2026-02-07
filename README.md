@@ -55,7 +55,7 @@ Import `tokens.css` first in the main stylesheet; other CSS files use these vari
 
 ## Deployment
 
-The site is built and deployed to GitHub Pages via GitHub Actions when changes are pushed to the `gh-pages` branch.
+The site is built and deployed to GitHub Pages via GitHub Actions when changes are pushed to `main`.
 
 1. In the repo: **Settings → Pages**
 2. Under **Build and deployment**, set **Source** to **GitHub Actions**
