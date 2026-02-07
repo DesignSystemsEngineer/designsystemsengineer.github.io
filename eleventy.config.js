@@ -53,7 +53,6 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addShortcode("figure", require("./src/_includes/shortcodes/figure.js"));
 
   eleventyConfig.addPassthroughCopy("src/assets");
-  eleventyConfig.addPassthroughCopy("index.html");
   eleventyConfig.addPassthroughCopy("css");
   eleventyConfig.addPassthroughCopy("favicon.png");
   eleventyConfig.addPassthroughCopy("favicon.svg");
