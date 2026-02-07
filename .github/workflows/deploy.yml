@@ -30,7 +30,7 @@ jobs:
           ELEVENTY_ENV: production
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@3
+        uses: actions/upload-pages-artifact@v4
         with:
           path: _site
 
