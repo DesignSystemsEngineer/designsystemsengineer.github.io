@@ -58,6 +58,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("favicon.svg");
   eleventyConfig.addPassthroughCopy("favicon-light.svg");
   eleventyConfig.addPassthroughCopy("favicon-dark.svg");
+  eleventyConfig.addPassthroughCopy("logo-mark.png");
+  eleventyConfig.addPassthroughCopy("DSE-logo.png");
   eleventyConfig.addPassthroughCopy("CNAME");
   eleventyConfig.addPassthroughCopy("org-chart-pictures");
 
