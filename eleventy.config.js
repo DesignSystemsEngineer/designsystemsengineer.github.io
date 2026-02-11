@@ -52,6 +52,11 @@ module.exports = function (eleventyConfig) {
     return arr.slice(start, end);
   });
 
+  eleventyConfig.addFilter("cacheBust", (dateObj) => {
+    if (!dateObj || !(dateObj instanceof Date)) return "";
+    return dateObj.getTime();
+  });
+
   const callout = require("./src/_includes/shortcodes/callout.js");
   eleventyConfig.addPairedShortcode("callout", callout);
   eleventyConfig.addShortcode("figure", require("./src/_includes/shortcodes/figure.js"));
