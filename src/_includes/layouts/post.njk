@@ -2,6 +2,9 @@
 layout: layouts/base.njk
 ---
 <article class="content-width prose">
+  {% if draft %}
+  <div class="draft-banner">Draft — not yet published</div>
+  {% endif %}
   <header>
     <h1 class="page-title">{{ title }}</h1>
     <p class="byline">{{ date | formatDate('MMMM d, yyyy') }}{% if tags and tags | length %} · {{ tags | join(', ') }}{% endif %}</p>

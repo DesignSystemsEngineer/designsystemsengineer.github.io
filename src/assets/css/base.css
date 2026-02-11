@@ -22,3 +22,12 @@ a:focus-visible {
 img { max-width: 100%; height: auto; display: block; }
 
 :focus-visible { outline: var(--focus-ring); outline-offset: var(--focus-ring-offset); }
+
+.draft-banner {
+  font-size: var(--type-scale-sm);
+  color: var(--color-muted);
+  background-color: var(--color-border);
+  padding: var(--space-sm) var(--space-md);
+  margin-bottom: var(--space-md);
+  border-radius: 4px;
+}

@@ -6,7 +6,9 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginSyntaxHighlight);
 
   eleventyConfig.addCollection("posts", function (collectionApi) {
-    return collectionApi.getFilteredByGlob("**/posts/*.md").sort((a, b) => b.data.date - a.data.date);
+    return collectionApi.getFilteredByGlob("**/posts/*.md")
+      .filter((item) => !item.data.draft)
+      .sort((a, b) => b.data.date - a.data.date);
   });
   eleventyConfig.addCollection("frameworks", function (collectionApi) {
     return collectionApi.getFilteredByGlob("**/frameworks/*.md");
@@ -19,7 +21,9 @@ module.exports = function (eleventyConfig) {
     return tag.toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9-]/g, "");
   });
   eleventyConfig.addCollection("tagPages", function (collectionApi) {
-    const posts = collectionApi.getFilteredByGlob("**/posts/*.md").sort((a, b) => b.data.date - a.data.date);
+    const posts = collectionApi.getFilteredByGlob("**/posts/*.md")
+      .filter((item) => !item.data.draft)
+      .sort((a, b) => b.data.date - a.data.date);
     const byTag = {};
     posts.forEach((p) => {
       (p.data.tags || []).forEach((tag) => {
