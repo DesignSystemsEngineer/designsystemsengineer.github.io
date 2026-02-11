@@ -1,9 +1,18 @@
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+const pluginTOC = require("eleventy-plugin-toc");
+const markdownIt = require("markdown-it");
+const markdownItAnchor = require("markdown-it-anchor");
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(pluginSyntaxHighlight);
+  eleventyConfig.addPlugin(pluginTOC, {
+    tags: ["h2", "h3", "h4"],
+    wrapper: "nav",
+    wrapperClass: "toc__nav",
+    ul: true,
+  });
 
   eleventyConfig.addCollection("posts", function (collectionApi) {
     return collectionApi.getFilteredByGlob("**/posts/*.md")
@@ -72,7 +81,10 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("CNAME");
   eleventyConfig.addPassthroughCopy("org-chart-pictures");
 
-  eleventyConfig.setLibrary("md", require("markdown-it")({ html: true }));
+  eleventyConfig.setLibrary(
+    "md",
+    markdownIt({ html: true }).use(markdownItAnchor)
+  );
 
   return {
     dir: {
