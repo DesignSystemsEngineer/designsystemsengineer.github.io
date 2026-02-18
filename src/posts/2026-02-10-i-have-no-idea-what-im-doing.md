@@ -35,6 +35,6 @@ I'm committed to filling that gap. Resources, frameworks, eventually a course. B
 
 **If you're building a design system**, what keeps you stuck? What questions don't have good answers yet? What would make your work materially easier?
 
-Reply to this newsletter, find me on LinkedIn, or reach out however you prefer.
+[Subscribe to the newsletter](https://pages.designsystems.engineer/), find me on [LinkedIn](https://www.linkedin.com/in/garthdb/) or [Bluesky](https://bsky.app/profile/garthdb.com), or reach out however you prefer.
 
 I'm figuring this out as I go, but I'm moving forward. Come build it with me.
