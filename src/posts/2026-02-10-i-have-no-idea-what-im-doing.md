@@ -9,9 +9,9 @@ tags:
 draft: true
 ---
 
-In April of 2024, I was sitting with Patrick Fulton, my wife Jamie, and Noelle Lansford in the Palladium Theater in St. Petersburg, Florida. We were on a break between sessions at the Front End Design Conf. I think Ben Callahan had just finished, and he was standing chatting with us. I don't really remember exactly what we said; it was a while ago, but I do remember wanting to build a Design System Engineering community or resources.
+In April of 2024, I was sitting with Patrick Fulton, my wife Jamie, and Noelle Lansford in the Palladium Theater in St. Petersburg, Florida. We were on a break between sessions at the Front End Design Conf. I think Ben Callahan had just finished, and he was standing chatting with us. I don't really remember exactly what we said; it was a while ago, but I remember the conversation turning to Design System Engineering—specifically, the gap between design resources and engineering resources. I wanted to do something about it.
 
-In 2022, my wife and I were working on our MBA online from Quantic, and for our capstone we put together a proposal for building a course for Design System Engineering and how we could make it something that might be able to make some money, but also get some of the ideas and experience I've had working on Spectrum, Adobe's design system, out of my head and share it with other.
+In 2022, my wife and I were working on our MBA online from Quantic, and for our capstone we put together a proposal for building a course for Design System Engineering and how we could make it something that might be able to make some money, but also get some of the ideas and experience I've had working on Spectrum, Adobe's design system, out of my head and share it with others.
 
 Further back in 2020, I was finishing up a Master's degree, Digital Media Design from Harvard Extension school, and I was using my capstone project as an excuse to apply the andragogy skills I had been sharpening to a Design Systems Engineering course or workshop that I could use to teach front-end engineers how to build a design system from scratch.
 
@@ -23,14 +23,18 @@ Around this time, I was also hosting podcasts in the Adobe MAX community lounge 
 
 ---
 
-What I'm trying to get at with all of this is that even though I have some idea of what I want to do with DesignSystems.Engineer, I've been having a hard time figuring out how to get there.
+What I'm trying to get at with all of this is that even though I have some idea of what I want to do with DesignSystems.Engineer, I've been circling this idea for years without committing to it.
 
-I want to build a collection of resources for engineers and designers who want to code a Design System, either from scratch or by improving an existing one. Eventually, I'd like to turn that into a course on building a design system from start to stable.
+Look, I don't know exactly how I'm going to accomplish this. But that's never stopped me before.
 
-There are plenty of smart resources and materials specifically for Designers, but fewer from a coding perspective.
+When we started Spectrum, it was a conversation between me and Mathieu about a PhoneGap UI kit. When I started teaching at UNLV, I had never taught a class before. When we built the Spark skinning architecture for Flex 4, we were making it up as we went.
 
----
+What I do know: **there's a real gap in resources for engineers building design systems.** Most content focuses on design decisions and organizational strategy. Critical stuff, but it leaves out the engineering perspective—the architecture, the tradeoffs, the "how do I actually build this" questions.
 
-Last week, I published my first article on DesignSystems.Engineer and set out my first newsletter about it. It wasn't much, a bit vague and generic, a decent idea at the center, but I don't know what I'm doing.
+I'm committed to filling that gap. Resources, frameworks, eventually a course. But I need to know what you actually need, not what I assume you need.
 
-If you're interested in helping me out, it would be nice to know what you're looking for. I have some guesses to start with, but I'm mostly taking a stab in the dark.
+**If you're building a design system**, what keeps you stuck? What questions don't have good answers yet? What would make your work materially easier?
+
+Reply to this newsletter, find me on LinkedIn, or reach out however you prefer.
+
+I'm figuring this out as I go, but I'm moving forward. Come build it with me.
