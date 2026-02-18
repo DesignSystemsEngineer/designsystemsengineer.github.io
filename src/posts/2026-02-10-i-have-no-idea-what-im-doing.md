@@ -11,7 +11,7 @@ draft: true
 
 {% figure "/assets/images/no-idea-what-im-doing.png", "Dog at computer with text: I have no idea what I'm doing" %}
 
-In April of 2024, I was sitting with Patrick Fulton, my wife Jamie, and Noelle Lansford in the Palladium Theater in St. Petersburg, Florida. We were on a break between sessions at the Front End Design Conf. I think Ben Callahan had just finished, and he was standing chatting with us. I don't really remember exactly what we said; it was a while ago, but I remember the conversation turning to Design System Engineering—specifically, the gap between design resources and engineering resources. I wanted to do something about it.
+In April of 2024, I was sitting with Patrick Fulton, my wife Jamie, and Noelle Lansford in the Palladium Theater in St. Petersburg, Florida. We were on a break between sessions at the Front End Design Conf. I think [Ben Callahan](https://bencallahan.com/the-question) had just finished, and he was standing chatting with us. I don't really remember exactly what we said; it was a while ago, but I remember the conversation turning to Design System Engineering—specifically, the gap between design resources and engineering resources. I wanted to do something about it.
 
 In 2022, my wife and I were working on our MBA online from Quantic, and for our capstone we put together a proposal for building a course for Design System Engineering and how we could make it something that might be able to make some money, but also get some of the ideas and experience I've had working on [Spectrum](https://spectrum.adobe.com/), Adobe's design system, out of my head and share it with others.
 
