@@ -56,6 +56,11 @@ module.exports = function (eleventyConfig) {
     return d.toISOString();
   });
 
+  eleventyConfig.addFilter("htmlDateString", (dateObj) => {
+    if (!dateObj || !(dateObj instanceof Date)) return "";
+    return dateObj.toISOString();
+  });
+
   eleventyConfig.addFilter("slice", (arr, start, end) => {
     if (!Array.isArray(arr)) return [];
     return arr.slice(start, end);

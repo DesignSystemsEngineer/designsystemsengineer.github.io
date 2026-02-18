@@ -6,6 +6,8 @@ tags:
   - design systems
   - design systems engineer
   - community
+socialImage: /assets/images/no-idea-what-im-doing.png
+socialImageAlt: Dog at computer with text 'I have no idea what I'm doing'
 draft: true
 ---
 
