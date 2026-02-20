@@ -186,7 +186,7 @@
 .card__tags a { color: var(--color-link); text-decoration: none; }
 .card__tags a:hover { text-decoration: underline; }
 
-/* Footnotes (markdown-it-footnote) */
+/* Footnote refs (inline superscripts) */
 .prose .footnote-ref {
   font-size: var(--type-scale-xs);
   font-weight: 600;
@@ -199,6 +199,73 @@
 .prose .footnote-ref a:hover {
   color: var(--color-link);
 }
+
+/* Sidenotes (build-time transformed from footnotes) */
+.sidenote {
+  font-size: var(--type-scale-sm);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-muted);
+  border-left: 2px solid var(--color-border);
+  padding: var(--space-sm) 0 var(--space-sm) var(--space-md);
+  margin: var(--space-sm) 0 var(--space-md);
+}
+.sidenote a {
+  color: var(--color-link);
+}
+.sidenote a:hover {
+  color: var(--color-link-hover);
+}
+
+@media (min-width: 960px) {
+  .prose.has-sidenotes {
+    position: relative;
+  }
+  .sidenote {
+    position: absolute;
+    right: 0;
+    transform: translateX(calc(100% + var(--space-xl)));
+    width: 200px;
+    margin: 0;
+    border-left: 2px solid var(--color-border);
+    padding: 0 0 0 var(--space-md);
+  }
+  .prose .footnote-ref a {
+    color: var(--color-link);
+  }
+}
+
+/* Toggle: hide/show sidenotes */
+.sidenote-toggle {
+  display: none;
+}
+.prose.has-sidenotes ~ .sidenote-toggle,
+.prose.has-sidenotes .sidenote-toggle {
+  display: inline-block;
+}
+.sidenote-toggle {
+  background: none;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  padding: var(--space-xs) var(--space-sm);
+  font-size: var(--type-scale-xs);
+  color: var(--color-muted);
+  cursor: pointer;
+  font-family: var(--font-base);
+  transition: color 0.15s, border-color 0.15s;
+}
+.sidenote-toggle:hover {
+  color: var(--color-fg);
+  border-color: var(--color-fg);
+}
+
+.prose.notes-hidden .sidenote {
+  display: none;
+}
+.prose.notes-hidden .footnote-ref {
+  display: none;
+}
+
+/* Fallback: if transform didn't run, keep footnotes at bottom */
 .prose .footnotes {
   margin-top: var(--space-2xl);
   padding-top: var(--space-lg);
@@ -206,29 +273,11 @@
   font-size: var(--type-scale-sm);
   color: var(--color-muted);
 }
-.prose .footnotes hr {
-  display: none;
-}
-.prose .footnotes ol {
-  margin: 0;
-  padding-left: var(--space-lg);
-}
-.prose .footnotes li {
-  margin-bottom: var(--space-sm);
-}
-.prose .footnotes li p {
-  margin: 0;
-}
-.prose .footnotes a {
-  color: var(--color-link);
-}
-.prose .footnotes a:hover {
-  color: var(--color-link-hover);
-}
-.prose .footnotes .footnote-backref {
-  text-decoration: none;
-  margin-left: 0.2em;
-}
-.prose .footnotes .footnote-backref:hover {
-  text-decoration: underline;
-}
+.prose hr.footnotes-sep { display: none; }
+.prose .footnotes ol { margin: 0; padding-left: var(--space-lg); }
+.prose .footnotes li { margin-bottom: var(--space-sm); }
+.prose .footnotes li p { margin: 0; }
+.prose .footnotes a { color: var(--color-link); }
+.prose .footnotes a:hover { color: var(--color-link-hover); }
+.prose .footnotes .footnote-backref { text-decoration: none; margin-left: 0.2em; }
+.prose .footnotes .footnote-backref:hover { text-decoration: underline; }

@@ -3,6 +3,7 @@ const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginTOC = require("eleventy-plugin-toc");
 const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
+const cheerio = require("cheerio");
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);
@@ -92,6 +93,49 @@ module.exports = function (eleventyConfig) {
       .use(markdownItAnchor)
       .use(require("markdown-it-footnote"))
   );
+
+  eleventyConfig.addTransform("sidenotes", function (content) {
+    if (!this.page.outputPath || !this.page.outputPath.endsWith(".html")) {
+      return content;
+    }
+    if (!content.includes("footnote-ref")) {
+      return content;
+    }
+
+    const $ = cheerio.load(content, { decodeEntities: false });
+    const $footnotes = $("section.footnotes");
+    if (!$footnotes.length) return content;
+
+    const $article = $("article.prose");
+    if (!$article.length) return content;
+
+    $article.addClass("has-sidenotes");
+
+    $article.find("sup.footnote-ref").each(function () {
+      const $ref = $(this);
+      const $link = $ref.find("a");
+      const href = $link.attr("href");
+      if (!href) return;
+
+      const fnId = href.replace("#", "");
+      const $fnItem = $footnotes.find(`#${fnId}`);
+      if (!$fnItem.length) return;
+
+      const noteHtml = $fnItem.find("p").html() || $fnItem.html();
+      const cleanHtml = noteHtml.replace(/<a[^>]*class="footnote-backref"[^>]*>.*?<\/a>/g, "").trim();
+
+      const $block = $ref.closest("p, li, blockquote, div, figcaption");
+      if (!$block.length) return;
+
+      const $sidenote = $(`<aside class="sidenote" role="note">${cleanHtml}</aside>`);
+      $block.after($sidenote);
+    });
+
+    $footnotes.prev("hr.footnotes-sep").remove();
+    $footnotes.remove();
+
+    return $.html();
+  });
 
   return {
     dir: {

@@ -11,7 +11,10 @@ layout: layouts/base.njk
     {% if description %}
     <p class="post-summary">{{ description }}</p>
     {% endif %}
-    <p class="byline">{{ date | formatDate('MMMM d, yyyy') }}</p>
+    <p class="byline">
+      {{ date | formatDate('MMMM d, yyyy') }}
+      <button class="sidenote-toggle" aria-label="Toggle sidenotes" onclick="var a=this.closest('.prose');a.classList.toggle('notes-hidden');this.textContent=a.classList.contains('notes-hidden')?'Show notes':'Hide notes'">Hide notes</button>
+    </p>
   </header>
   {% if tocContent %}
   <details class="toc">
