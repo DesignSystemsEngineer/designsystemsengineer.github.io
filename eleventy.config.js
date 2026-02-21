@@ -110,6 +110,9 @@ module.exports = function (eleventyConfig) {
     if (!$article.length) return content;
 
     $article.addClass("has-sidenotes");
+    $article.find(".byline").first().append(
+      ' <button class="sidenote-toggle" type="button" aria-label="Toggle sidenotes">Hide notes</button>'
+    );
 
     $article.find("sup.footnote-ref").each(function () {
       const $ref = $(this);
@@ -117,22 +120,30 @@ module.exports = function (eleventyConfig) {
       const href = $link.attr("href");
       if (!href) return;
 
-      const fnId = href.replace("#", "");
+      const fnId = href.replace(/^#/, "");
       const $fnItem = $footnotes.find(`#${fnId}`);
       if (!$fnItem.length) return;
 
-      const noteHtml = $fnItem.find("p").html() || $fnItem.html();
+      const noteHtml = $fnItem.html();
       const cleanHtml = noteHtml.replace(/<a[^>]*class="footnote-backref"[^>]*>.*?<\/a>/g, "").trim();
 
       const $block = $ref.closest("p, li, blockquote, div, figcaption");
       if (!$block.length) return;
 
-      const $sidenote = $(`<aside class="sidenote" role="note">${cleanHtml}</aside>`);
-      $block.after($sidenote);
+      let $insertAfter = $block;
+      while ($insertAfter.next().length && $insertAfter.next().hasClass("sidenote")) {
+        $insertAfter = $insertAfter.next();
+      }
+      const $sidenote = $(`<aside class="sidenote" id="${fnId}" role="note">${cleanHtml}</aside>`);
+      $insertAfter.after($sidenote);
     });
 
     $footnotes.prev("hr.footnotes-sep").remove();
     $footnotes.remove();
+
+    const toggleScript =
+      "(function(){var btn=document.querySelector('.prose.has-sidenotes .sidenote-toggle');if(!btn)return;btn.addEventListener('click',function(){var p=this.closest('.prose');p.classList.toggle('notes-hidden');this.textContent=p.classList.contains('notes-hidden')?'Show notes':'Hide notes';});})();";
+    $article.append($(`<script>${toggleScript}</script>`));
 
     return $.html();
   });

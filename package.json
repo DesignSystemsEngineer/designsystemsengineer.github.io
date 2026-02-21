@@ -5,10 +5,7 @@
   "scripts": {
     "start": "eleventy --serve",
     "build": "eleventy",
-    "serve": "eleventy --serve",
-    "check-grammar": "node scripts/check-grammar.js",
-    "generate-social-drafts": "node scripts/generate-social-drafts.js",
-    "generate-newsletter-variant": "node scripts/generate-newsletter-variant.js"
+    "serve": "eleventy --serve"
   },
   "keywords": [
     "eleventy",
