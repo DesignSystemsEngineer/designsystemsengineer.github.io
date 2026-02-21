@@ -32,7 +32,7 @@
 /* Drop cap for first paragraph of content - spans 2 lines */
 .prose header + p::first-letter,
 .prose details + p::first-letter,
-.prose aside + p::first-letter {
+.prose aside:not(.sidenote) + p::first-letter {
   font-family: var(--font-heading);
   font-size: 3.25em;
   line-height: 0.9;
@@ -217,15 +217,12 @@
 }
 
 @media (min-width: 960px) {
-  .prose.has-sidenotes {
-    position: relative;
-  }
   .sidenote {
-    position: absolute;
-    right: 0;
-    transform: translateX(calc(100% + var(--space-xl)));
+    float: right;
+    clear: right;
     width: 200px;
-    margin: 0;
+    margin-right: calc(-200px - var(--space-xl));
+    margin-bottom: var(--space-md);
     padding: 0 0 0 var(--space-md);
   }
   .prose .footnote-ref a {

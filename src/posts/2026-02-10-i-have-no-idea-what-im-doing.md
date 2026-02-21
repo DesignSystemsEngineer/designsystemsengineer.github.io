@@ -13,7 +13,7 @@ draft: true
 
 {% figure "/assets/images/no-idea-what-im-doing.png", "Dog at computer with text: I have no idea what I'm doing" %}
 
-In April of 2024, I was sitting with Patrick Fulton, my wife Jamie, and Noelle Lansford in the Palladium Theater in St. Petersburg, Florida. We were on a break between sessions at the Front End Design Conf. I think [Ben Callahan](https://bencallahan.com/the-question) had just finished[^ben], and he was standing chatting with us. I don't really remember exactly what we said; it was a while ago, but I remember the conversation turning to Design System Engineering—specifically, the gap between design resources and engineering resources. I wanted to do something about it.
+In April of 2024, I was sitting with Patrick Fulton, my wife Jamie, and Noelle Lansford[^noelle] in the Palladium Theater in St. Petersburg, Florida. We were on a break between sessions at the Front End Design Conf. I think [Ben Callahan](https://bencallahan.com/the-question) had just finished[^ben], and he was standing chatting with us. I don't really remember exactly what we said; it was a while ago, but I remember the conversation turning to Design System Engineering—specifically, the gap between design resources and engineering resources. I wanted to do something about it.
 
 In 2022, my wife and I were working on our MBA online from Quantic, and for our capstone we put together a proposal for building a course for Design System Engineering and how we could make it something that might be able to make some money, but also get some of the ideas and experience I've had working on [Spectrum](https://spectrum.adobe.com/), Adobe's design system, out of my head and share it with others.
 
@@ -43,5 +43,6 @@ I'm committed to filling that gap. Resources, frameworks, eventually a course. B
 
 I'm figuring this out as I go, but I'm moving forward. Come build it with me.
 
-[^ben]: *The Question* is an excellent talk—well worth watching if you get the chance.
+[^ben]: [*The Question*](https://bencallahan.com/the-question) is a weekly collaborative learning discussion for anyone seriously interested in design systems—well worth checking out.
 [^mathieu]: Mathieu is now Head of Design at [Photoroom](https://photoroom.com). You can find him on [LinkedIn](https://www.linkedin.com/in/mathieubadimon/).
+[^noelle]: Noelle is Founder & CEO of [Shep](http://noellelansford.com), a design system consultancy, and an Into Design Systems chapter organizer in Columbus, Ohio.
