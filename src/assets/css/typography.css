@@ -226,7 +226,6 @@
     transform: translateX(calc(100% + var(--space-xl)));
     width: 200px;
     margin: 0;
-    border-left: 2px solid var(--color-border);
     padding: 0 0 0 var(--space-md);
   }
   .prose .footnote-ref a {
@@ -237,12 +236,6 @@
 /* Toggle: hide/show sidenotes */
 .sidenote-toggle {
   display: none;
-}
-.prose.has-sidenotes ~ .sidenote-toggle,
-.prose.has-sidenotes .sidenote-toggle {
-  display: inline-block;
-}
-.sidenote-toggle {
   background: none;
   border: 1px solid var(--color-border);
   border-radius: 4px;
@@ -252,6 +245,9 @@
   cursor: pointer;
   font-family: var(--font-base);
   transition: color 0.15s, border-color 0.15s;
+}
+.prose.has-sidenotes .sidenote-toggle {
+  display: inline-block;
 }
 .sidenote-toggle:hover {
   color: var(--color-fg);
