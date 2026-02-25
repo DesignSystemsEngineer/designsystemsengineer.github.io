@@ -3,6 +3,7 @@ const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginTOC = require("eleventy-plugin-toc");
 const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
+const cheerio = require("cheerio");
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);
@@ -88,8 +89,64 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.setLibrary(
     "md",
-    markdownIt({ html: true }).use(markdownItAnchor)
+    markdownIt({ html: true })
+      .use(markdownItAnchor)
+      .use(require("markdown-it-footnote"))
   );
+
+  eleventyConfig.addTransform("sidenotes", function (content) {
+    if (!this.page.outputPath || !this.page.outputPath.endsWith(".html")) {
+      return content;
+    }
+    if (!content.includes("footnote-ref")) {
+      return content;
+    }
+
+    const $ = cheerio.load(content, { decodeEntities: false });
+    const $footnotes = $("section.footnotes");
+    if (!$footnotes.length) return content;
+
+    const $article = $("article.prose");
+    if (!$article.length) return content;
+
+    $article.addClass("has-sidenotes");
+    $article.find(".byline").first().append(
+      ' <button class="sidenote-toggle" type="button" aria-label="Toggle sidenotes">Hide notes</button>'
+    );
+
+    $article.find("sup.footnote-ref").each(function () {
+      const $ref = $(this);
+      const $link = $ref.find("a");
+      const href = $link.attr("href");
+      if (!href) return;
+
+      const fnId = href.replace(/^#/, "");
+      const $fnItem = $footnotes.find(`#${fnId}`);
+      if (!$fnItem.length) return;
+
+      const noteHtml = $fnItem.html();
+      const cleanHtml = noteHtml.replace(/<a[^>]*class="footnote-backref"[^>]*>.*?<\/a>/g, "").trim();
+
+      const $block = $ref.closest("p, li, blockquote, div, figcaption");
+      if (!$block.length) return;
+
+      let $insertAfter = $block;
+      while ($insertAfter.next().length && $insertAfter.next().hasClass("sidenote")) {
+        $insertAfter = $insertAfter.next();
+      }
+      const $sidenote = $(`<aside class="sidenote" id="${fnId}" role="note">${cleanHtml}</aside>`);
+      $insertAfter.after($sidenote);
+    });
+
+    $footnotes.prev("hr.footnotes-sep").remove();
+    $footnotes.remove();
+
+    const toggleScript =
+      "(function(){var btn=document.querySelector('.prose.has-sidenotes .sidenote-toggle');if(!btn)return;btn.addEventListener('click',function(){var p=this.closest('.prose');p.classList.toggle('notes-hidden');this.textContent=p.classList.contains('notes-hidden')?'Show notes':'Hide notes';});})();";
+    $article.append($(`<script>${toggleScript}</script>`));
+
+    return $.html();
+  });
 
   return {
     dir: {

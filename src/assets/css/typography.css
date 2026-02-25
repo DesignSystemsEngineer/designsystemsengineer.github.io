@@ -32,7 +32,7 @@
 /* Drop cap for first paragraph of content - spans 2 lines */
 .prose header + p::first-letter,
 .prose details + p::first-letter,
-.prose aside + p::first-letter {
+.prose aside:not(.sidenote) + p::first-letter {
   font-family: var(--font-heading);
   font-size: 3.25em;
   line-height: 0.9;
@@ -185,3 +185,92 @@
 .card__date { margin-bottom: var(--space-xs); }
 .card__tags a { color: var(--color-link); text-decoration: none; }
 .card__tags a:hover { text-decoration: underline; }
+
+/* Footnote refs (inline superscripts) */
+.prose .footnote-ref {
+  font-size: var(--type-scale-xs);
+  font-weight: 600;
+  margin-left: 0.15em;
+}
+.prose .footnote-ref a {
+  text-decoration: none;
+  color: var(--color-muted);
+}
+.prose .footnote-ref a:hover {
+  color: var(--color-link);
+}
+
+/* Sidenotes (build-time transformed from footnotes) */
+.sidenote {
+  font-size: var(--type-scale-sm);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-muted);
+  border-left: 2px solid var(--color-border);
+  padding: var(--space-sm) 0 var(--space-sm) var(--space-md);
+  margin: var(--space-sm) 0 var(--space-md);
+}
+.sidenote a {
+  color: var(--color-link);
+}
+.sidenote a:hover {
+  color: var(--color-link-hover);
+}
+
+@media (min-width: 960px) {
+  .sidenote {
+    float: right;
+    clear: right;
+    width: 200px;
+    margin-right: calc(-200px - var(--space-xl));
+    margin-bottom: var(--space-md);
+    padding: 0 0 0 var(--space-md);
+  }
+  .prose .footnote-ref a {
+    color: var(--color-link);
+  }
+}
+
+/* Toggle: hide/show sidenotes */
+.sidenote-toggle {
+  display: none;
+  background: none;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  padding: var(--space-xs) var(--space-sm);
+  font-size: var(--type-scale-xs);
+  color: var(--color-muted);
+  cursor: pointer;
+  font-family: var(--font-base);
+  transition: color 0.15s, border-color 0.15s;
+}
+.prose.has-sidenotes .sidenote-toggle {
+  display: inline-block;
+}
+.sidenote-toggle:hover {
+  color: var(--color-fg);
+  border-color: var(--color-fg);
+}
+
+.prose.notes-hidden .sidenote {
+  display: none;
+}
+.prose.notes-hidden .footnote-ref {
+  display: none;
+}
+
+/* Fallback: if transform didn't run, keep footnotes at bottom */
+.prose .footnotes {
+  margin-top: var(--space-2xl);
+  padding-top: var(--space-lg);
+  border-top: 1px solid var(--color-border);
+  font-size: var(--type-scale-sm);
+  color: var(--color-muted);
+}
+.prose hr.footnotes-sep { display: none; }
+.prose .footnotes ol { margin: 0; padding-left: var(--space-lg); }
+.prose .footnotes li { margin-bottom: var(--space-sm); }
+.prose .footnotes li p { margin: 0; }
+.prose .footnotes a { color: var(--color-link); }
+.prose .footnotes a:hover { color: var(--color-link-hover); }
+.prose .footnotes .footnote-backref { text-decoration: none; margin-left: 0.2em; }
+.prose .footnotes .footnote-backref:hover { text-decoration: underline; }
